@@ -20,7 +20,8 @@ public class LoginWindow {
 	private JTextField passwordField;
 	private JButton loginButton;
 	private JLabel infoLabel;
-	private User users[] = {new User("Ada", "123"), new User("Jan", "abc")}; 
+	private User users[] = {new User("Ada",  "123", "Adrianna", "Rajewska", "adrianna@thebritishschool.pl"), new User("Jsmith", "abc","John", "Smith", "jan@thebritishschool.pl")}; 
+
 
 	/**
 	 * Launch the application.
@@ -29,6 +30,7 @@ public class LoginWindow {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
+					
 					LoginWindow window = new LoginWindow();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
@@ -49,6 +51,7 @@ public class LoginWindow {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
+		Laboratory.loadInventory();
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

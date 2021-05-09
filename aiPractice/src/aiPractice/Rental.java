@@ -60,4 +60,13 @@ public class Rental {
 	public String toString() {
 		return this.itemName + " : " + this.itemQuantity;
 	}
+
+	public void replaceQuantity(int newQuantity) {
+		this.itemQuantity = newQuantity;
+		
+	}
+	
+	public boolean isOverDue() {
+		return LocalDateTime.now().isAfter(rentDateTime.plusDays(7));
+	}
 }

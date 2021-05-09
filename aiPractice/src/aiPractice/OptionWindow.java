@@ -6,6 +6,8 @@ import javax.swing.JFrame;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JTextField;
+import javax.swing.JLabel;
 
 public class OptionWindow{
 
@@ -50,14 +52,43 @@ public class OptionWindow{
 		rentButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame.dispose();
-				ItemBrowser2.main(null);
+				ItemBrowser.main(loggedUser);
 			}
 		});
-		rentButton.setBounds(154, 59, 136, 51);
+		rentButton.setBounds(154, 46, 136, 51);
 		frame.getContentPane().add(rentButton);
 		
 		JButton returnButton = new JButton("RETURN");
-		returnButton.setBounds(154, 122, 136, 51);
+		returnButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				frame.dispose();
+				ReturnWindow.main(loggedUser);
+			}
+		});
+		returnButton.setBounds(154, 109, 136, 51);
 		frame.getContentPane().add(returnButton);
+		
+		JLabel acessdenied = new JLabel("");
+		acessdenied.setBounds(164, 235, 118, 16);
+		frame.getContentPane().add(acessdenied);
+		
+		JButton btnNewButton = new JButton("USER LIST");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				boolean flag = true;
+				if(loggedUser.getUsername() == "Ada") {
+					frame.dispose();
+					Userlist.main(loggedUser);
+				}
+				acessdenied.setText("ACESS DENIED");
+				frame.repaint();
+				
+			}
+		});
+		btnNewButton.setBounds(154, 172, 136, 51);
+		frame.getContentPane().add(btnNewButton);
+		
+		
+		
 	}
 }

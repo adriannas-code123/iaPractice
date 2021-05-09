@@ -1,6 +1,7 @@
 package aiPractice;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class User {
 	private String username;
@@ -10,12 +11,18 @@ public class User {
 	private String email;
 	private boolean restricted;
 	private ArrayList<Rental> userRentals;
+	public static HashMap<String,User> users = new HashMap<>();
 	
 	//constructor
 	public User(String username, String password) {
 		this.username = username;
 		this.password = password;
 		this.userRentals = new ArrayList<>();
+		users.put(username, this);
+	}
+	
+	public  void activateUser() {
+		restricted = false;
 	}
 	
 	public String getUsername() {
@@ -30,10 +37,11 @@ public class User {
 		this.username = username;
 		this.password = password;
 		this.firstName = firstName;
-		this.lastName = lastName;
-		this.email = email;
+		this.setLastName(lastName);
+		this.setEmail(email);
 		this.userRentals = new ArrayList<>();
 		this.restricted = false;
+		users.put(username, this);
 	}
 	
 	public boolean isRestricted() {
@@ -48,4 +56,35 @@ public class User {
 	public ArrayList<Rental> getUserRentals(){
 		return userRentals;
 	}
+
+	public String getFirstName() {
+		// TODO Auto-generated method stub
+		return firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	
+	public int getNumberOfOngoingRentals() {
+		int counter = 0;
+		for( Rental rental : userRentals) {
+			if(rental.getIsReturned() == false)
+				counter++;
+		}
+		return counter;
+	}
+	
 }
