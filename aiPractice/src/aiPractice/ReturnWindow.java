@@ -10,6 +10,7 @@ import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import javax.swing.JSpinner;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.awt.event.ActionEvent;
 import java.awt.Color;
 
@@ -81,8 +82,17 @@ public class ReturnWindow {
 						
 						flag = false;
 			}
-				loggedUser.activateUser();
-			
+				if(flag) {
+					loggedUser.activateUser();
+				}
+				try {
+					Laboratory.save();
+					User.save();
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				
 			}
 		});
 		btnNewButton.setBounds(243, 315, 155, 38);

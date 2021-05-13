@@ -1,0 +1,184 @@
+[
+  {
+    "user": {
+      "username": "Ada",
+      "password": "123",
+      "firstName": "Adrianna",
+      "lastName": "Rajewska",
+      "email": "adrianna@thebritishschool.pl",
+      "restricted": false
+    },
+    "rentDateTime": {
+      "date": {
+        "year": 2021,
+        "month": 5,
+        "day": 13
+      },
+      "time": {
+        "hour": 20,
+        "minute": 58,
+        "second": 58,
+        "nano": 2449000
+      }
+    },
+    "itemName": "d.liquid",
+    "itemQuantity": 20,
+    "isReturned": true
+  },
+  {
+    "user": {
+      "username": "Ada",
+      "password": "123",
+      "firstName": "Adrianna",
+      "lastName": "Rajewska",
+      "email": "adrianna@thebritishschool.pl",
+      "restricted": false
+    },
+    "rentDateTime": {
+      "date": {
+        "year": 2021,
+        "month": 5,
+        "day": 13
+      },
+      "time": {
+        "hour": 20,
+        "minute": 58,
+        "second": 58,
+        "nano": 2520000
+      }
+    },
+    "itemName": "gas.jar",
+    "itemQuantity": 20,
+    "isReturned": false
+  },
+  {
+    "user": {
+      "username": "Ada",
+      "password": "123",
+      "firstName": "Adrianna",
+      "lastName": "Rajewska",
+      "email": "adrianna@thebritishschool.pl",
+      "restricted": false
+    },
+    "rentDateTime": {
+      "date": {
+        "year": 2021,
+        "month": 5,
+        "day": 13
+      },
+      "time": {
+        "hour": 20,
+        "minute": 58,
+        "second": 58,
+        "nano": 2582000
+      }
+    },
+    "itemName": "gas.jar2",
+    "itemQuantity": 20,
+    "isReturned": false
+  },
+  {
+    "user": {
+      "username": "Ada",
+      "password": "123",
+      "firstName": "Adrianna",
+      "lastName": "Rajewska",
+      "email": "adrianna@thebritishschool.pl",
+      "restricted": false
+    },
+    "rentDateTime": {
+      "date": {
+        "year": 2021,
+        "month": 5,
+        "day": 13
+      },
+      "time": {
+        "hour": 20,
+        "minute": 58,
+        "second": 58,
+        "nano": 2611000
+      }
+    },
+    "itemName": "beaker",
+    "itemQuantity": 20,
+    "isReturned": true
+  },
+  {
+    "user": {
+      "username": "Ada",
+      "password": "123",
+      "firstName": "Adrianna",
+      "lastName": "Rajewska",
+      "email": "adrianna@thebritishschool.pl",
+      "restricted": false
+    },
+    "rentDateTime": {
+      "date": {
+        "year": 2021,
+        "month": 5,
+        "day": 13
+      },
+      "time": {
+        "hour": 20,
+        "minute": 58,
+        "second": 58,
+        "nano": 2633000
+      }
+    },
+    "itemName": "trough",
+    "itemQuantity": 20,
+    "isReturned": false
+  },
+  {
+    "user": {
+      "username": "Jsmith",
+      "password": "abc",
+      "firstName": "John",
+      "lastName": "Smith",
+      "email": "jan@thebritishschool.pl",
+      "restricted": false
+    },
+    "rentDateTime": {
+      "date": {
+        "year": 2021,
+        "month": 5,
+        "day": 13
+      },
+      "time": {
+        "hour": 21,
+        "minute": 39,
+        "second": 13,
+        "nano": 16697000
+      }
+    },
+    "itemName": "conical.f.",
+    "itemQuantity": 2,
+    "isReturned": false
+  },
+  {
+    "user": {
+      "username": "Jsmith",
+      "password": "abc",
+      "firstName": "John",
+      "lastName": "Smith",
+      "email": "jan@thebritishschool.pl",
+      "restricted": false
+    },
+    "rentDateTime": {
+      "date": {
+        "year": 2021,
+        "month": 5,
+        "day": 13
+      },
+      "time": {
+        "hour": 21,
+        "minute": 39,
+        "second": 13,
+        "nano": 16767000
+      }
+    },
+    "itemName": "canula",
+    "itemQuantity": 20,
+    "isReturned": false
+  }
+]

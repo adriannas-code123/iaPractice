@@ -1,16 +1,23 @@
 package aiPractice;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class User {
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+public class User implements Serializable {
 	private String username;
 	private String password;
 	private String firstName;
 	private String lastName;
 	private String email;
 	private boolean restricted;
-	private ArrayList<Rental> userRentals;
+	private transient ArrayList<Rental> userRentals;
 	public static HashMap<String,User> users = new HashMap<>();
 	
 	//constructor
@@ -85,6 +92,15 @@ public class User {
 				counter++;
 		}
 		return counter;
+	}
+	
+	public static void save() throws IOException {
+		Gson gson = new GsonBuilder().setPrettyPrinting().create();
+		File usersFile = new File("users.json");
+		FileWriter fileWriterUsers= new FileWriter(usersFile);
+		fileWriterUsers.write(gson.toJson(users));	
+		fileWriterUsers.flush();
+		fileWriterUsers.close();
 	}
 	
 }

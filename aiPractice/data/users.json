@@ -1,0 +1,18 @@
+{
+  "Jsmith": {
+    "username": "Jsmith",
+    "password": "abc",
+    "firstName": "John",
+    "lastName": "Smith",
+    "email": "jan@thebritishschool.pl",
+    "restricted": false
+  },
+  "Ada": {
+    "username": "Ada",
+    "password": "123",
+    "firstName": "Adrianna",
+    "lastName": "Rajewska",
+    "email": "adrianna@thebritishschool.pl",
+    "restricted": false
+  }
+}

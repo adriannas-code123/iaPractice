@@ -9,6 +9,7 @@ import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
@@ -376,6 +377,7 @@ public class ItemBrowser {
 			public void actionPerformed(ActionEvent e) {
 				boolean flag = true;
 				for(int i = 0; i< rentalsInBasket.size(); i ++) {
+					
 					if(!Laboratory.rentItems(rentalsInBasket.get(i)))
 							flag = false;
 				}
@@ -383,6 +385,13 @@ public class ItemBrowser {
 				listModel.removeAllElements();
 				basketList.repaint();
 				if(flag) {
+				try {
+					Laboratory.save();
+					User.save();
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 				frame.dispose();
 				new OptionWindow(loggedUser);
 				} else {
